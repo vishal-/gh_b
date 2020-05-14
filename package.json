@@ -1,0 +1,29 @@
+{
+  "name": "gh_b",
+  "version": "0.0.1",
+  "description": "Api services with express and sequelize",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:prod": "node src/index.js",
+    "start": "nodemon --watch src --watch config src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishal-/gh_b.git"
+  },
+  "author": "Vishal Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishal-/gh_b/issues"
+  },
+  "homepage": "https://github.com/vishal-/gh_b#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "nodemon": "^2.0.3",
+    "sequelize": "^5.21.8",
+    "winston": "^3.2.1"
+  }
+}
