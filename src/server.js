@@ -1,5 +1,5 @@
 import Express from "express";
-import { AppRoutes, NoteRoutes } from "./routes/index";
+import { AppRoutes, NoteRoutes, OfferingRoutes } from "./routes/index";
 import logger from "../config/logger.config";
 
 export default class Server {
@@ -10,6 +10,11 @@ export default class Server {
     this.app.route(AppRoutes.favicon.PATH).get(AppRoutes.favicon.GET);
 
     this.app.route(NoteRoutes.PATH).get(NoteRoutes.GET).post(NoteRoutes.POST);
+
+    this.app
+      .route(OfferingRoutes.PATH)
+      .get(OfferingRoutes.GET)
+      .post(OfferingRoutes.POST);
 
     this.app.route(AppRoutes.default.PATH).get(AppRoutes.default.GET);
   };
