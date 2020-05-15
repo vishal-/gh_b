@@ -7,6 +7,7 @@ Offering.init(
   {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
     title: { type: Sequelize.STRING, allowNull: false, unique: true },
+    headline: { type: Sequelize.STRING, allowNull: false },
     description: { type: Sequelize.STRING(100), allowNull: false },
     active: { type: Sequelize.BOOLEAN, defaultValue: true }
   },
@@ -17,6 +18,6 @@ Offering.init(
   }
 );
 
-// Offering.sync({ alter: true });
+Offering.sync({ alter: true });
 
 export default Offering;

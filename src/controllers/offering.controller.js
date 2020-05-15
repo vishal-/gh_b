@@ -2,8 +2,12 @@ import Offering from "../models/offering";
 import { capitalize } from "../utils/s.utils";
 
 class OfferingController {
-  add = async ({ title, description }) =>
-    await Offering.create({ title: capitalize(title), description });
+  add = async ({ title, headline, description }) =>
+    await Offering.create({
+      title: title.toLowerCase(),
+      headline: capitalize(headline),
+      description
+    });
 
   fetch = async () => await Offering.findAll();
 
