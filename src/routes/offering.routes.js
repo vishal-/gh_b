@@ -8,6 +8,7 @@ const OfferingRoutes = {
 
   GET: async (req, res) => {
     logger.debug(`Fetching offerings`);
+
     res.send(await oc.fetch());
   },
 

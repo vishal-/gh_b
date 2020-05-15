@@ -1,9 +1,10 @@
 import Express from "express";
+import { SERVER } from "../config/app.config";
 import { AppRoutes, NoteRoutes, OfferingRoutes } from "./routes/index";
 import logger from "../config/logger.config";
 
 export default class Server {
-  port = 4040;
+  port = SERVER.PORT;
   app = new Express();
 
   addRoutes = () => {
