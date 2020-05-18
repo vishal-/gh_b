@@ -6,18 +6,20 @@ class Offering extends Sequelize.Model {}
 Offering.init(
   {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
-    title: { type: Sequelize.STRING, allowNull: false, unique: true },
-    headline: { type: Sequelize.STRING(100), allowNull: false },
+    name: { type: Sequelize.STRING, allowNull: false, unique: true },
+    title: { type: Sequelize.STRING, allowNull: false },
+    subtext: { type: Sequelize.STRING(100), allowNull: false },
     description: { type: Sequelize.TEXT, allowNull: false },
     active: { type: Sequelize.BOOLEAN, defaultValue: true }
   },
   {
     sequelize,
     timestamps: true,
-    modelName: "offering"
+    modelName: "offering",
+    tableName: "gh_offerings"
   }
 );
 
-Offering.sync({ alter: true });
+Offering.sync({ force: true });
 
 export default Offering;

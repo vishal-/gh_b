@@ -2,10 +2,11 @@ import Offering from "../models/offering";
 import { capitalize } from "../utils/s.utils";
 
 class OfferingController {
-  add = async ({ title, headline, description }) =>
+  add = async ({ name, title, subtext, description = "" }) =>
     await Offering.create({
-      title: title.toLowerCase(),
-      headline: capitalize(headline),
+      name: name.toLowerCase(),
+      title: capitalize(title),
+      subtext: subtext.toLowerCase(),
       description
     });
 
