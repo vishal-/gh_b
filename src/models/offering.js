@@ -7,8 +7,8 @@ Offering.init(
   {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
     title: { type: Sequelize.STRING, allowNull: false, unique: true },
-    headline: { type: Sequelize.STRING, allowNull: false },
-    description: { type: Sequelize.STRING(100), allowNull: false },
+    headline: { type: Sequelize.STRING(100), allowNull: false },
+    description: { type: Sequelize.TEXT, allowNull: false },
     active: { type: Sequelize.BOOLEAN, defaultValue: true }
   },
   {

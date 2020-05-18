@@ -17,7 +17,7 @@ const logger = winston.createLogger({
     new winston.transports.File({
       filename: path.join(LOG.PATH, LOG.FILENAME),
       format: winston.format.printf(
-        (info) =>
+        info =>
           `${info.level.toUpperCase()} :: ${new Date().toLocaleString()} ==> ${
             info.message
           } `
