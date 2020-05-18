@@ -33,7 +33,8 @@ Service.init(
   {
     sequelize,
     timestamps: true,
-    modelName: "service"
+    modelName: "service",
+    tableName: "gh_services"
   }
 );
 
