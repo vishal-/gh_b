@@ -1,6 +1,7 @@
 import winston from "winston";
 import path from "path";
 import { LOG } from "./app.config";
+import { VG } from "./art.config";
 
 const logger = winston.createLogger({
   level: "debug",
@@ -26,5 +27,7 @@ const logger = winston.createLogger({
     })
   ]
 });
+
+VG(logger);
 
 export default logger;

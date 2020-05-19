@@ -15,6 +15,9 @@ const getDBConfiguration = () => {
 
     logger.error(`DB configuration string not found in the environment`);
   }
+
+  logger.info("Loading default db configuration");
+
   return {
     host: "192.168.1.48",
     schema: "gh_b",
