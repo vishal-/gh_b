@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/vishal-/gh_b#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
     "express": "^4.17.1",

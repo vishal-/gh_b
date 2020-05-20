@@ -2,6 +2,7 @@ import Express from "express";
 import { SERVER } from "../config/app.config";
 import { AppRoutes, NoteRoutes, OfferingRoutes } from "./routes/index";
 import logger from "../config/logger.config";
+import cors from "cors";
 
 export default class Server {
   port = SERVER.PORT;
@@ -21,6 +22,7 @@ export default class Server {
   };
 
   addMiddlewares = () => {
+    this.app.use(cors());
     this.app.use(Express.json());
   };
 
